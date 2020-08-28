@@ -12,8 +12,7 @@
 ```sh
 sudo apt-get -y install lsb-release
 release=`lsb_release -c -s`
-```
-{{execute}}
+```{{execute}}
 
 ## Репозитории
 Добавим две строки в список репозиториев исходного кода
@@ -21,18 +20,15 @@ release=`lsb_release -c -s`
 sudo rm -f /etc/apt/sources.list.d/*tarantool*.list
 echo "deb https://download.tarantool.org/tarantool/release/2.5/ubuntu/ ${release} main" | sudo tee /etc/apt/sources.list.d/tarantool_2_5.list
 echo "deb-src https://download.tarantool.org/tarantool/release/2.5/ubuntu/ ${release} main" | sudo tee -a /etc/apt/sources.list.d/tarantool_2_5.list
-```
-{{execute}}
+```{{execute}}
 
 ## Установим тарантул
 
 ```sh
 sudo apt-get -y update
-```
-{{execute}}
+```{{execute}}
 
 ```sh
 sudo apt-get -y install tarantool
-```
-{{execute}}
+```{{execute}}
 
