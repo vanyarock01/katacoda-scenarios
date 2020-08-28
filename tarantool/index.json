@@ -1,0 +1,25 @@
+{
+  "title": "Tarantool",
+  "description": "На этом уроке мы установим Tarantool на на нашу систему, создадим базу данных и попробуем выполнить несколько запросов.",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Шаг 1 - установим Tarantool",
+      "text": "step1.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:1804"
+  }
+}
