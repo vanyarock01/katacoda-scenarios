@@ -17,10 +17,10 @@ Tarantool это удобно. Но давайте представим, что 
 
 Теперь подключимся к нашему тарантулу, как пользователь пупа.
 
-`tarantoolctl connect pupa:lupa@localhost:3301`{{execute}}
+`tarantoolctl connect pupa:lupa@localhost:3301`{{execute T1}}
 
 Давайте проверим, что это действительно **тот** тарантул.
 
-`box.space.map:select()`{{execute}}
+`box.space.map:select()`{{execute T1}}
 
 ...а на этом пока все(
