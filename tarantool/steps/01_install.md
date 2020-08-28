@@ -30,8 +30,3 @@ sudo apt-get -y update
 ```sh
 sudo apt-get -y install tarantool
 ```{{execute}}
-
-## Проверим
-
-`tarantool --version`{{execute}}
-

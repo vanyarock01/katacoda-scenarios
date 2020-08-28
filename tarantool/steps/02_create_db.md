@@ -16,18 +16,16 @@ Space - что-то вроде таблицы в RDB, по факту это к�
 
 Создадим спейс для хранения пар key:value.
 
-```lua
-s = box.schema.space.create('map')
 ```
-{{execute}}
+s = box.schema.space.create('map')
+```{{execute}}
 
-```lua
+```
 s:format({
     {name = 'key', type = 'string'},
     {name = 'val', type = 'any'},
 })
-```
-{{execute}}
+```{{execute}}
 
 ## INDEX
 
@@ -35,36 +33,34 @@ s:format({
 
 ```
 s:create_index('primary', {
-    uniqie = true,
+    unique = true,
     type = 'HASH',
     parts = {
         {field = 1, type = 'string'},
     }
 })
-```
-{{execute}}
+```{{execute}}
 
 ## INSERT
 
 Наш спейс готов. Попробуем вставить пару записей.
 
 ```
-s:insert({'xyz', 12})
-s:insert({'xyy', 24})
-```
-{{execute}}
+s:insert({'biba', 12})
+s:insert({'boba', 24})
+```{{execute}}
 
 ## GET
 
 Теперь попробуем получить записи при помощи get запроса.
 
 ```
-s:get('xyz')
+s:get('biba')
 ```
 {{execute}}
 
 ```
-s:get('xyy')
+s:get('boba')
 ```
 
 Видим, что записи можно получить всего одним легким касанием пальцев клавиатуры.
