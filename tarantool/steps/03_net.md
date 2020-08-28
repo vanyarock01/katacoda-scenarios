@@ -5,22 +5,20 @@ Tarantool это удобно. Но давайте представим, что 
 
 Чтобы кто зря не посягнул на наши данные создадим пользователя и выдадим ему права на выполнение своих скриптов.
 
-`box.schema.user.create('pupa', {password='lupa'})`{{execute}}
+`box.schema.user.create('pupa', {password='lupa'})`{{execute T1}}
 
-`box.schema.user.grant('pupa', 'read,write,execute', 'universe')`{{execute}}
+`box.schema.user.grant('pupa', 'read,write,execute', 'universe')`{{execute T1}}
 
 ## TARANTOOLCTL
 
 `tarantoolctl` это утилита для всяких разных операций вокруг Tarantool - установка модулей, запуск инстансов и, в том числе, при помощи нее можно удаленно подключиться к tarantool и чего-нибудь там натворить.
 
-Давайте попробуем, но сначала **откроем еще одно окошко терминала, нажав на плюсик сверху**.
-
 Теперь подключимся к нашему тарантулу, как пользователь пупа.
 
-`tarantoolctl connect pupa:lupa@localhost:3301`{{execute T1}}
+`tarantoolctl connect pupa:lupa@localhost:3301`{{execute T2}}
 
 Давайте проверим, что это действительно **тот** тарантул.
 
-`box.space.map:select()`{{execute T1}}
+`box.space.map:select()`{{execute T2}}
 
 ...а на этом пока все(
