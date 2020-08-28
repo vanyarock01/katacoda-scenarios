@@ -4,10 +4,16 @@
   "difficulty": "beginner",
   "time": "15 minutes",
   "details": {
-    "steps": [{
-      "title": "Шаг 1 - установим Tarantool",
-      "text": "step1.md"
-    }],
+    "steps": [
+      {
+        "title": "Шаг 1 - установим Tarantool",
+        "text": "steps/01_install.md"
+      },
+      {
+        "title": "Шаг 2 - создадим экземпляр базы данных",
+        "text": "steps/02_create_db.md"
+      }
+    ],
     "intro": {
       "text": "intro.md",
       "credits": ""

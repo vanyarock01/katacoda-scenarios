@@ -10,7 +10,6 @@
 
 Можно использовать утилиту lsb-release или задать вручную (в нашем случае bionic)
 ```sh
-sudo apt-get -y install lsb-release
 release=`lsb_release -c -s`
 ```{{execute}}
 
@@ -31,4 +30,8 @@ sudo apt-get -y update
 ```sh
 sudo apt-get -y install tarantool
 ```{{execute}}
+
+## Проверим
+
+`tarantool --version`{{execute}}
 
